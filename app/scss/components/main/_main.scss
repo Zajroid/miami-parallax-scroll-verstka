@@ -51,12 +51,20 @@
     box-shadow: rgb(0, 0, 0, 0.75) 0 0 0 4000px;
 }
 
+
 .description {
     position: absolute;
-    font-size: calc(var(--size-index) * 0.8);
+    font-size: calc(var(--size-index) * 1.2);
     top: 20vh;
     left: 8vw;
-    max-width: 30vw;
+    max-width: 40vw;
+    transition: opacity var(--transition), transform var(--transition);
+
+    p {
+        opacity: 0.8;
+        transition: transform var(--transition);
+        transition-duration: 3s;
+    }
 
     .logo {
         font-size: calc(var(--size-index) * 3);
@@ -65,5 +73,15 @@
         background: linear-gradient(45deg, DarkMagenta, Tomato, Violet);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
+        opacity: 1 !important;
+    }
+}
+
+.description.hidden {
+    opacity: 0;
+    transform: translateY(5vh);
+
+    p {
+        transform: translateY(2vh);
     }
 }
