@@ -13,6 +13,8 @@
             overflow: hidden;
             cursor: pointer;
 
+            border-radius: 30px;
+
             .slider__img {
                 position: absolute;
                 width: 300%;
@@ -27,3 +29,20 @@
         }
     }
 }
+
+
+
+.slider_bg {
+    z-index: 0;
+    transform: rotate(-15deg)!important;
+    top: -100vh;
+    left: -10vh;
+
+    opacity: .15;
+    filter: saturate(1000) blur(800px);
+
+    .slider__item {
+        min-height: 100vh;
+    }
+}
+
