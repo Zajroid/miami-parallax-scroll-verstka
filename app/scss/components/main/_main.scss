@@ -1,6 +1,29 @@
 .slider {
-  height: 100%;
-  transform: rotate(15deg);
-  overflow: visible;
-  top: 10vh;
+    height: 100%;
+    transform: rotate(15deg);
+    overflow: visible;
+    top: 10vh;
+
+    .slider__wrapper {
+        // transition: var(--transition)!important;
+        will-change: transform;
+
+        .slider__item {
+            max-height: 75vh;
+            overflow: hidden;
+            cursor: pointer;
+
+            .slider__img {
+                position: absolute;
+                width: 300%;
+                height: 100%;
+                background-size: cover;
+                left: -100%;
+
+                // transition: var(--transition)!important;
+
+                will-change: transform; // ram
+            }
+        }
+    }
 }
